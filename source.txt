@@ -1,0 +1,18 @@
+Le traducteur Français-Javanais
+Autre programme Python pour traduire un mot français en javanais. 
+
+Quelques règles de base pour traduire un mot français en javanais : 
+"av" est ajouté après chaque consonne (ou groupe de consonnes comme ch, cl, ph, tr,…) d’un mot, 
+si le mot commence par une voyelle, "av" est ajouté devant cette voyelle, 
+"av" n'est jamais ajouté après la consonne finale d’un mot. 
+
+La lettre "y" nécessite une condition spéciale : 
+en effet s'il est suivi d'une voyelle, le "y" est traité comme une consonne. 
+Le mot "moyen" est codé mavoyaven (pas mavoyen). 
+S'il est lui-même prononcé comme "i", il est traité comme une consonne suivie de la voyelle "i". 
+Le mot "pays" est codé pavayavis (pas pavays) 
+
+Le "e" muet n'impose pas la présence de syllabe supplémentaire : "tarte" est codé tavarte. 
+
+Comme vous pouvez certainement le constater, ce programme n'est pas encore au point. 
+Certaines conditions restent à améliorer afin d'obtenir un mot traduit correctement à tous les coups !

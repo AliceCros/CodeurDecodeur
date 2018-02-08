@@ -1,10 +1,14 @@
 #  -*- coding: utf-8 -*-
+"""Ce programme encode ou décode le contenu d'un fichier"""
 
 # String de référence contenant les lettres de l'alphabet
 alpha_input = "abcdefghijklmnopqrstuvwxyz"
 
 
 def file_content_mystify(source, dest, gap):
+    """Fonction file_content_mystify qui prend en argument le fichier source,
+    le fichier destination, et le décalage souhaité (postif pour encoder,
+    négatif pour décoder) par le user pour encoder / décoder"""
     source = open(source, 'r')
     dest = open(dest, 'a')
 
@@ -29,3 +33,4 @@ gap_file = input("Quel intervalle ? ")
 
 res = file_content_mystify(source_file, dest_file, gap_file)
 print(res)
+exit()

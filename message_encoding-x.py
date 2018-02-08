@@ -1,4 +1,6 @@
 # -*- coding: utf8 -*-
+"""Ce programme propose d'encoder ou décoder un message saisi
+par le user."""
 
 import subprocess
 
@@ -6,17 +8,12 @@ import subprocess
 alpha_input = "abcdefghijklmnopqrstuvwxyz"
 
 
-def mystify(gap, message = '', source_file = '', dest_file = ''):
+def mystify(gap, message):
+    """Fonction mystify prenant en argument un gap et un message."""
     # Cast de gap (string) en int stocké dans la var key
     key = int(gap)
     # Variable vide destinée à contenir le message codé/décodé
     new_message = ''
-
-    # Si la fonction a été appelée avec un fichier source et destination
-    if message == '':
-        # On ouvre et on stocke le contenu dans la var message
-        content = open(source_file, 'r')
-        message = content.readlines()
 
     # Itération sur chaque lettre de la variable
     for character in message:
@@ -38,14 +35,6 @@ def mystify(gap, message = '', source_file = '', dest_file = ''):
             # On ajoute à la chaîne le caractère sans changement
             new_message += character
 
-    # CECI CODE LE NOM DU FICHIER DESTINATION (CA NE COLLE PAS LE NEW_MESSAGE A L'INTERIEUR
-    # Si la fonction a été appelé avec un fichier source et destination
-    if source_file != '' and dest_file != '':
-        # On ouvre le fichier destination et on y ajoute le contenu de new_message
-        destination = open(dest_file, 'x')
-        destination.write(new_message)
-        content.close()
-        destination.close()
     return new_message
 
 
@@ -58,10 +47,10 @@ while True:
     # Si le user répond oui...
     if conf in ('o', 'O', 'oui', 'OUI', 'y', 'Y', 'yes', 'YES'):
         # Demande et récupère la variable à convertir
-        message = input("Ton message : ")
+        message_user = input("Ton message : ")
         # Demande et récupère le décalage à calculer (positif ou négatif)
-        gap = input("Quel décalage ? ")
-        print(mystify(gap, message))
+        gap_user = input("Quel décalage ? ")
+        print(mystify(gap_user, message_user))
         # On sort de la boucle
         False
 

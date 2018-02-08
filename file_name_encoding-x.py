@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-# Ce programme a pour objectif de traduire (encoder/décoder) les noms de fichiers
+""" Ce programme a pour objectif de traduire (encoder/décoder) des noms de fichiers"""
 
 # Importation d'os pour le renommage des fichiers
 import os
@@ -13,7 +13,8 @@ encoded_files = {}
 
 
 def file_name_mystify(file, gap=''):
-
+    """Fonction file_name_mystify qui prend en argument le nom du fichier
+    le décalage de caractère souhaité"""
     key = 0
     # Dans le cas d'un décodage
     # on veut retrouver le gap appliqué lors de l'encodage
@@ -51,15 +52,15 @@ def file_name_mystify(file, gap=''):
 while True:
     action = input("Souhaite-tu encoder ou décoder un nom de fichier ? (e/d) ")
     if action in ('e', 'E'):
-        file = input("Nom de ton fichier : ")
+        file_name = input("Nom de ton fichier : ")
         gap_file = input("Quel intervalle ? ")
-        print(file_name_mystify(file, gap_file))
+        print(file_name_mystify(file_name, gap_file))
     elif action not in ('e', 'E', 'd', 'D'):
         print("Ce n'est pas ma question O_o")
         True
     else:
-        file = input("Nom de ton fichier : ")
-        print(file_name_mystify(file))
+        file_name = input("Nom de ton fichier : ")
+        print(file_name_mystify(file_name))
         False
     ok = input("'C' pour continuer, 'S' pour sortir : ")
     if ok == 'S':

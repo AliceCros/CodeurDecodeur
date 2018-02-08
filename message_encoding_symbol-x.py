@@ -1,4 +1,7 @@
 # -*- coding: utf8 -*-
+"""Ce programme propose une alternative d'encodage avec des caractères
+autres que celui de l'alphabet. Pas de décodage possible. Programme appelé
+grâce à argparse."""
 
 import argparse
 
@@ -22,7 +25,9 @@ alph_input = "abcdefghijklmnopqrstuvwxyz"
 symb_input = "αβγδεζηθικλμνξοπρςστυφχψω-"
 
 
-def mystify(gap, message=''):
+def mystify(gap, message):
+    """Fonction mystify prenant un argument de décalage
+    et un argument comprenant le message."""
     # Cast de gap (string) en int stocké dans la var key
     key = int(gap)
     # Variable vide destinée à contenir le message codé/décodé

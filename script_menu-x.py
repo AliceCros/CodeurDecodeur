@@ -1,4 +1,6 @@
 # -*- coding: utf8 -*-
+"""Ce programme propose un menu et renvoie vers les programmes
+sélectionnés par l'utilisateur."""
 
 # Importation nous servant à ouvrir le script voulu
 import subprocess
@@ -31,7 +33,7 @@ while True:
                 except ValueError:
                     print()
                     print("Neiiiin")
-        if choice == 'X':
+        if choice == "X":
             exit()
             False
         break

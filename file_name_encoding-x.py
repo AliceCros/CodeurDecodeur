@@ -45,7 +45,7 @@ def file_name_mystify(file, gap=''):
         encoded_files[new_file] = key
     else:
         pass
-    return file
+    return new_file
 
 
 while True:
@@ -63,7 +63,11 @@ while True:
         False
     ok = input("'C' pour continuer, 'S' pour sortir : ")
     if ok == 'S':
-        subprocess.call(["/usr/local/bin/python3.6",
-                         "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/script_menu.py"])
+        # Redirection sur le Mac de la Coding
+        """subprocess.call(["/usr/local/bin/python3.6",
+                         "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/script_menu.py"])"""
+        # Redirection sur PC perso
+        subprocess.call(["C:/Users/Alice/AppData/Local/Programs/Python/Python36-32/python.exe",
+                        "C:/Users/Alice/PycharmProjects/CodeurDecodeur_v1.2/script_menu-x.py"])
     else:
         True

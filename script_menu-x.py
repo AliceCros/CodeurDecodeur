@@ -31,6 +31,9 @@ while True:
                 except ValueError:
                     print()
                     print("Neiiiin")
+        if choice == 'X':
+            exit()
+            False
         break
     except ValueError:
         print()
@@ -38,14 +41,26 @@ while True:
         print("Allez recommence !")
         print("Et entre un chiffre entre 1 et 3 cette fois !")
 
-if choice == 1:
+# Redirection sur le Mac de la Coding Factory
+"""if choice == 1:
     subprocess.call(["/usr/local/bin/python3.6",
-                     "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/message_encoding.py"])
+                     "/Users/alice/PycharmProjects/CodeurDecodeur_v1.2/message_encoding.py"])
 elif choice == 2:
     subprocess.call(["/usr/local/bin/python3.6",
-                     "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/file_name_encoding.py"])
+                     "/Users/alice/PycharmProjects/CodeurDecodeur_v1.2/file_name_encoding.py"])
 elif choice == 3:
     subprocess.call(["/usr/local/bin/python3.6",
-                     "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/file_content_encoding.py"])
+                     "/Users/alice/PycharmProjects/CodeurDecodeur_v1.2/file_content_encoding.py"])
 elif choice == 'X':
-    exit()
+    exit()"""
+
+# Redirection sur PC perso
+if choice == 1:
+    subprocess.call(["C:/Users/Alice/AppData/Local/Programs/Python/Python36-32/python.exe",
+                     "C:/Users/Alice/PycharmProjects/CodeurDecodeur_v1.2/message_encoding-x.py"])
+elif choice == 2:
+    subprocess.call(["C:/Users/Alice/AppData/Local/Programs/Python/Python36-32/python.exe",
+                     "C:/Users/Alice/PycharmProjects/CodeurDecodeur_v1.2/file_name_encoding-x.py"])
+elif choice == 3:
+    subprocess.call(["C:/Users/Alice/AppData/Local/Programs/Python/Python36-32/python.exe",
+                     "C:/Users/Alice/PycharmProjects/CodeurDecodeur_v1.2/file_content_encoding-x.py"])

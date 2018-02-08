@@ -18,8 +18,8 @@ args = parser.parse_args()
 
 # String de référence contenant les lettres de l'alphabet
 alph_input = "abcdefghijklmnopqrstuvwxyz"
-aleat_input = "[&@#'°%ù/:.>èé'(8743567564"
-# symb_input = "αβγδεζηθικλμνξοπρςστυφχψω-"
+# aleat_input = "[&@#'°%ù/:.>èé'(8743567564"
+symb_input = "αβγδεζηθικλμνξοπρςστυφχψω-"
 
 
 def mystify(gap, message=''):
@@ -39,7 +39,7 @@ def mystify(gap, message=''):
             # grâce au décalage en paramètre
             new_position = (position + key) % 26
             # On stocke le caractère correspondant à la nouvelle indexation
-            new_char = aleat_input[new_position]
+            new_char = symb_input[new_position]
             # On ajoute chaque nouveau caractère à la var new_message
             new_message += new_char
         # On gère les caractères spéciaux

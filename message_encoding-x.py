@@ -69,8 +69,12 @@ while True:
     elif conf in ('n', 'N', 'non', 'NON', 'no', 'NO'):
         print()
         print(">> Retour au menu")
-        subprocess.call(["/usr/local/bin/python3.6",
-                         "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/script_menu.py"])
+        # Redirection sur le Mac de la Coding Factory
+        """subprocess.call(["/usr/local/bin/python3.6",
+                         "/Users/alice/PycharmProjects/CodeurDecodeur_v1.1/script_menu.py"])"""
+        # Redirection sur PC perso
+        subprocess.call(["C:/Users/Alice/AppData/Local/Programs/Python/Python36-32/python.exe",
+                        "C:/Users/Alice/PycharmProjects/CodeurDecodeur_v1.2/script_menu-x.py"])
 
     # Si le user répond à côté
     else:
